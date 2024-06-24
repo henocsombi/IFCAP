@@ -2,16 +2,57 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
-
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
+        <title>{% block title %}IFCAP - Centre de Formation{% endblock %}</title>
+        <link rel="shortcut icon" href="images/logos/icon-ifcap.png" type="image/x-icon">
     </head>
+
     <body>
+
+        <header>
+
+            <img src="/images/logos/logo-ifcap.png" alt="IFCAP logo">
+
+            <ul>
+                <li><a class="" href="">Accueil</a></li>
+                <li><a class="" href="">À Propos</a></li>
+                <li><a class="" href="">Nos Formations</a></li>
+            </ul>
+
+            <button>Contactez-nous</button>
+
+        </header>
+
         {% block body %}{% endblock %}
+
+        <footer>
+
+            <div class="footer1">
+                <img src="/images/logos/logo-ifcap2.png" alt="IFCAP logo version blanc">
+                <img src="/images/logos/logo-qualiopi.png" alt="Qualiopi logo">
+            </div>
+
+            <div class="footer2">
+                <p>Notre Site</p>
+                <ul>
+                    <li><a class="" href="">Accueil</a></li>
+                    <li><a class="" href="">À Propos</a></li>
+                    <li><a class="" href="">Nos Formations</a></li>
+                    <li><a class="" href="">S'inscrire</a></li>
+                </ul>
+            </div>
+
+            <div class="footer3">
+                <p>Nos contacts</p>
+                <ul>
+                    <li>Siège Institut de Formation de Conseil et d'Autonomisation</li>
+                    <li>🏢 60 rue François 1er 75008 Paris</li>
+                    <li>📞 Téléphone : 00-00-00-00-00</li>
+                    <li>📧 Email : ifcap.formations@gmail.com</li>
+                </ul>
+            </div>
+
+        </footer>
+
     </body>
+
 </html>
