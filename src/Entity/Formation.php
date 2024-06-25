@@ -47,10 +47,17 @@ class Formation
     #[ORM\OneToMany(targetEntity: Session::class, mappedBy: 'idFormation')]
     private Collection $sessions;
 
+    /**
+     * @var Collection<int, Inscription>
+     */
+    #[ORM\OneToMany(targetEntity: Inscription::class, mappedBy: 'idFormation')]
+    private Collection $inscriptions;
+
     public function __construct()
     {
         $this->avis = new ArrayCollection();
         $this->sessions = new ArrayCollection();
+        $this->inscriptions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -184,6 +191,36 @@ class Formation
             // set the owning side to null (unless already changed)
             if ($session->getIdFormation() === $this) {
                 $session->setIdFormation(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Inscription>
+     */
+    public function getInscriptions(): Collection
+    {
+        return $this->inscriptions;
+    }
+
+    public function addInscription(Inscription $inscription): static
+    {
+        if (!$this->inscriptions->contains($inscription)) {
+            $this->inscriptions->add($inscription);
+            $inscription->setIdFormation($this);
+        }
+
+        return $this;
+    }
+
+    public function removeInscription(Inscription $inscription): static
+    {
+        if ($this->inscriptions->removeElement($inscription)) {
+            // set the owning side to null (unless already changed)
+            if ($inscription->getIdFormation() === $this) {
+                $inscription->setIdFormation(null);
             }
         }
 
