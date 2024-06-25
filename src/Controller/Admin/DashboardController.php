@@ -60,7 +60,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Date', 'far fa-calendar', Date::class);
         yield MenuItem::linkToCrud('Avis', 'fas fa-comment', Avis::class);
         yield MenuItem::linkToCrud('Contact', 'fas fa-address-card', Contact::class);
-        yield MenuItem::linkToCrud('Session', 'fas fa-calendar-days', Session::class);
         yield MenuItem::linkToCrud('Inscription', 'fas fa-user', Inscription::class);
     }
 }
