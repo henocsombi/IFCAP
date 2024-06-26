@@ -10,6 +10,7 @@ use App\Entity\Formation;
 use App\Entity\Inscription;
 use App\Entity\Session;
 use App\Entity\User; //ajouté manuellement
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -47,6 +48,12 @@ class DashboardController extends AbstractDashboardController
     {
         return Dashboard::new()
             ->setTitle('IFCAP');
+    }
+
+    public function configureCrud(): Crud
+    {
+        return parent::configureCrud()
+            ->renderContentMaximized();
     }
 
     public function configureMenuItems(): iterable
