@@ -18,9 +18,6 @@ class Certification
     #[ORM\Column(length: 255)]
     private ?string $niveau = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $bac = null;
-
     /**
      * @var Collection<int, Formation>
      */
@@ -45,18 +42,6 @@ class Certification
     public function setNiveau(string $niveau): static
     {
         $this->niveau = $niveau;
-
-        return $this;
-    }
-
-    public function getBac(): ?string
-    {
-        return $this->bac;
-    }
-
-    public function setBac(string $bac): static
-    {
-        $this->bac = $bac;
 
         return $this;
     }

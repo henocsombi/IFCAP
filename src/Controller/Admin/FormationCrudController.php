@@ -22,6 +22,7 @@ class FormationCrudController extends AbstractCrudController
             TextField::new(propertyName: 'nom'),
             TextEditorField::new(propertyName: 'resume'),
             TextEditorField::new(propertyName: 'description'),
+            TextField::new(propertyName: 'duree'),
             TextEditorField::new(propertyName: 'prerequis'),
             TextEditorField::new(propertyName: 'debouches'),
             AssociationField::new(propertyName: 'idCertif'),
