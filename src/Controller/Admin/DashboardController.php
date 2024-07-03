@@ -5,9 +5,8 @@ namespace App\Controller\Admin;
 use App\Entity\Avis;
 use App\Entity\Certification;
 use App\Entity\Contact;
-use App\Entity\Date;
 use App\Entity\Formation;
-use App\Entity\Inscription;
+use App\Entity\Adherent;
 use App\Entity\Session;
 use App\Entity\User; //ajouté manuellement
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -54,12 +53,11 @@ class DashboardController extends AbstractDashboardController
         // yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'app_home');
         yield MenuItem::linkToCrud('User', 'fas fa-user', User::class);
-        yield MenuItem::linkToCrud('Cerification', 'fas fa-check', Certification::class);
-        yield MenuItem::linkToCrud('Formation', 'fas fa-list', Formation::class);
-        yield MenuItem::linkToCrud('Session', 'fas fa-calendar', Session::class);
-        yield MenuItem::linkToCrud('Date', 'far fa-calendar', Date::class);
+        yield MenuItem::linkToCrud('Cerifications', 'fas fa-check', Certification::class);
+        yield MenuItem::linkToCrud('Formations', 'fas fa-list', Formation::class);
+        yield MenuItem::linkToCrud('Sessions', 'fas fa-calendar', Session::class);
         yield MenuItem::linkToCrud('Avis', 'fas fa-comment', Avis::class);
         yield MenuItem::linkToCrud('Contact', 'fas fa-address-card', Contact::class);
-        yield MenuItem::linkToCrud('Inscription', 'fas fa-user', Inscription::class);
+        yield MenuItem::linkToCrud('Adherents', 'fas fa-user', Adherent::class);
     }
 }

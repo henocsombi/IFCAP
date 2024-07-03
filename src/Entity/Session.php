@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\SessionRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: SessionRepository::class)]
@@ -17,12 +18,14 @@ class Session
     #[ORM\JoinColumn(nullable: false)]
     private ?Formation $idFormation = null;
 
-    #[ORM\ManyToOne(inversedBy: 'sessions')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Date $idDate = null;
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $dateDebut = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $dateFin = null;
 
     #[ORM\Column]
-    private ?int $inscriptions = null;
+    private ?int $nbrAdherents = null;
 
     public function getId(): ?int
     {
@@ -41,26 +44,38 @@ class Session
         return $this;
     }
 
-    public function getIdDate(): ?Date
+    public function getDateDebut(): ?\DateTimeInterface
     {
-        return $this->idDate;
+        return $this->dateDebut;
     }
 
-    public function setIdDate(?Date $idDate): static
+    public function setDateDebut(\DateTimeInterface $dateDebut): static
     {
-        $this->idDate = $idDate;
+        $this->dateDebut = $dateDebut;
 
         return $this;
     }
 
-    public function getInscriptions(): ?int
+    public function getDateFin(): ?\DateTimeInterface
     {
-        return $this->inscriptions;
+        return $this->dateFin;
     }
 
-    public function setInscriptions(int $inscriptions): static
+    public function setDateFin(\DateTimeInterface $dateFin): static
     {
-        $this->inscriptions = $inscriptions;
+        $this->dateFin = $dateFin;
+
+        return $this;
+    }
+
+    public function getNbrAdherents(): ?int
+    {
+        return $this->nbrAdherents;
+    }
+
+    public function setTelephone(int $nbrAdherents): static
+    {
+        $this->nbrAdherents = $nbrAdherents;
 
         return $this;
     }

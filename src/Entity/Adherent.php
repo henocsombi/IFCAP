@@ -2,12 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\InscriptionRepository;
+use App\Repository\AdherentRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: InscriptionRepository::class)]
-class Inscription
+#[ORM\Entity(repositoryClass: AdherentRepository::class)]
+#[ORM\Table(name: "Adherent")]
+class Adherent
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

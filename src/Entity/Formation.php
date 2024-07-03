@@ -26,6 +26,9 @@ class Formation
     private ?string $description = null;
 
     #[ORM\Column(length: 255)]
+    private ?string $duree = null;
+
+    #[ORM\Column(length: 255)]
     private ?string $prerequis = null;
 
     #[ORM\Column(length: 255)]
@@ -48,16 +51,16 @@ class Formation
     private Collection $sessions;
 
     /**
-     * @var Collection<int, Inscription>
+     * @var Collection<int, Adherent>
      */
-    #[ORM\OneToMany(targetEntity: Inscription::class, mappedBy: 'idFormation')]
-    private Collection $inscriptions;
+    #[ORM\OneToMany(targetEntity: Adherent::class, mappedBy: 'idFormation')]
+    private Collection $adherents;
 
     public function __construct()
     {
         $this->avis = new ArrayCollection();
         $this->sessions = new ArrayCollection();
-        $this->inscriptions = new ArrayCollection();
+        $this->adherents = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -97,6 +100,18 @@ class Formation
     public function setDescription(string $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getDuree(): ?string
+    {
+        return $this->duree;
+    }
+
+    public function setDuree(string $duree): static
+    {
+        $this->duree = $duree;
 
         return $this;
     }
@@ -198,32 +213,37 @@ class Formation
     }
 
     /**
-     * @return Collection<int, Inscription>
+     * @return Collection<int, Adherent>
      */
-    public function getInscriptions(): Collection
+    public function getAdherents(): Collection
     {
-        return $this->inscriptions;
+        return $this->adherents;
     }
 
-    public function addInscription(Inscription $inscription): static
+    public function addAdherent(Adherent $adherent): static
     {
-        if (!$this->inscriptions->contains($inscription)) {
-            $this->inscriptions->add($inscription);
-            $inscription->setIdFormation($this);
+        if (!$this->adherents->contains($adherent)) {
+            $this->adherents->add($adherent);
+            $adherent->setIdFormation($this);
         }
 
         return $this;
     }
 
-    public function removeInscription(Inscription $inscription): static
+    public function removeAdherent(Adherent $adherent): static
     {
-        if ($this->inscriptions->removeElement($inscription)) {
+        if ($this->adherents->removeElement($adherent)) {
             // set the owning side to null (unless already changed)
-            if ($inscription->getIdFormation() === $this) {
-                $inscription->setIdFormation(null);
+            if ($adherent->getIdFormation() === $this) {
+                $adherent->setIdFormation(null);
             }
         }
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->nom;
     }
 }
