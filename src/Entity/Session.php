@@ -73,7 +73,9 @@ class Session
         return $this->nbrAdherents;
     }
 
-    public function setTelephone(int $nbrAdherents): static
+
+
+    public function setNbrAdherents(int $nbrAdherents): static
     {
         $this->nbrAdherents = $nbrAdherents;
 
