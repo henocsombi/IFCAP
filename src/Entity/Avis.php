@@ -27,6 +27,9 @@ class Avis
     #[ORM\JoinColumn(nullable: false)]
     private ?Formation $idFormation = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $photo = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -76,6 +79,18 @@ class Avis
     public function setIdFormation(?Formation $idFormation): static
     {
         $this->idFormation = $idFormation;
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): static
+    {
+        $this->photo = $photo;
 
         return $this;
     }
