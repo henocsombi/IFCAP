@@ -1,0 +1,68 @@
+/* SECTION 1 : BANNER */
+
+.banner{
+  background-image: url(../images/banner1.jpg);
+  height: 65rem;
+  background-size: cover;
+  background-position-y: 30%;
+}
+
+.banner-color{
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  display: flex;
+  
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.banner-title{
+  width: 35%;
+  height: 55%;
+}
+
+.banner-resume{
+  width: 23%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2% 0%;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50rem;
+  justify-content: space-evenly;
+}
+
+.about-text{
+  width: 70%;
+  text-align: center;
+  line-height: 3rem;
+}
+
+.about-qualities{
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.about-quality-icon{
+  width: 100px;
+}
+
+.about-quality-text{
+  padding: 0% 20%;
+}
+
+.bac-icon{
+  padding: 0;
+}
