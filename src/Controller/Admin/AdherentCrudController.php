@@ -15,7 +15,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TelephoneField;
 
 class AdherentCrudController extends AbstractCrudController
 {
-    // use Trait\ReadOnlyTrait;
+    use Trait\ReadOnlyTrait;
 
     public static function getEntityFqcn(): string
     {

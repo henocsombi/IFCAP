@@ -14,8 +14,8 @@
 
 :root{
   --title-font: "Inter", sans-serif;
-  --title-size: 30px;
-  --subtitle-size: 20px;
+  --title-size: 35px;
+  --subtitle-size: 25px;
   --button-fontsize: 14px;
   --color1: #B86735;
   --color2: #0097B2;
@@ -24,6 +24,24 @@
 
 
 /* General */
+
+h1{
+  color: white;
+  font-size: 80px;
+  font-weight: 400;
+}
+
+h2{
+  font-family: var(--title-font);
+  font-size: var(--title-size);
+  font-weight: 500;
+  color: var(--title-color);
+  text-align: center;
+}
+
+p{
+  font-size: 16px;
+}
 
 a{
   color: unset;
@@ -52,18 +70,35 @@ button:hover{
   cursor: pointer;
 }
 
+.resume-title, .resume-text{
+  font-size: var(--subtitle-size);
+  color: var(--title-color);
+  text-align: center;
+  font-weight: 600;
+  width: 40%;
+}
+
+.resume-text{
+  width: 85%;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 /* End General */
 
 /* HEADER */
 
 header{
+  position: fixed;
+  width: 100%;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .logo{
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .nav-list{
