@@ -121,3 +121,19 @@
 /* FIN FORMATIONS */
 
 /* SECTION 4 : AVIS */
+
+.avis-slider{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.avis-slider-container{
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.avis-card{
+  width: 32%;
+}
