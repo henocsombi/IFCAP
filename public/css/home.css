@@ -2,7 +2,7 @@
 
 .banner{
   background-image: url(../images/banner1.jpg);
-  height: 70rem;
+  height: 55rem;
   background-size: cover;
   background-position-y: 30%;
 }
@@ -17,7 +17,7 @@
 }
 
 .banner-title{
-  width: 35%;
+  width: 45%;
   height: 55%;
 }
 
@@ -42,7 +42,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60rem;
+  height: 50rem;
   justify-content: space-evenly;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .about-quality-icon{
-  width: 100px;
+  width: 80px;
 }
 
 .about-quality-text{
@@ -76,7 +76,7 @@
 /* SECTION 3 : FORMATIONS */
 
 .formations{
-  height: 85rem;
+  height: 70rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,5 +110,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
+
+.formations-button{
+  width: 250px;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+/* FIN FORMATIONS */
+
+/* SECTION 4 : AVIS */
