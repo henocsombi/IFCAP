@@ -2,7 +2,7 @@
 
 .banner{
   background-image: url(../images/banner1.jpg);
-  height: 65rem;
+  height: 70rem;
   background-size: cover;
   background-position-y: 30%;
 }
@@ -34,11 +34,15 @@
   padding: 2% 0%;
 }
 
+/* FIN BANNER */
+
+/* SECTION 2 : ABOUT */
+
 .about{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 50rem;
+  height: 60rem;
   justify-content: space-evenly;
 }
 
@@ -65,4 +69,46 @@
 
 .bac-icon{
   padding: 0;
+}
+
+/* FIN ABOUT */
+
+/* SECTION 3 : FORMATIONS */
+
+.formations{
+  height: 85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.formations-container{
+  width: 70%;
+  height: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.formations-card{
+  width: 47%;
+  height: 47%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+}
+
+.formations-card p{
+  color: white;
+  background-color: #00000050;
+  height: 15%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
