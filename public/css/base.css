@@ -91,6 +91,7 @@ button:hover{
 
 header{
   position: fixed;
+  z-index: 1;
   width: 100%;
   background-color: white;
   box-shadow: 0px 5px 50px #89898959;
