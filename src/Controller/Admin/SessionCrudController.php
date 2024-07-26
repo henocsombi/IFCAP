@@ -22,8 +22,8 @@ class SessionCrudController extends AbstractCrudController
     {
         return [
             AssociationField::new(propertyName: 'idFormation'),
-            DateField::new(propertyName: 'dateDebut'),
-            DateField::new(propertyName: 'dateFin'),
+            DateField::new(propertyName: 'dateDebut')->setFormat('dd MMMM yyyy'),
+            DateField::new(propertyName: 'dateFin')->setFormat('dd MMMM yyyy'),
             NumberField::new(propertyName: 'nbrAdherents'),
         ];
     }
