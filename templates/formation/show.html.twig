@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}IFCAP - {{ slug }}{% endblock %}
+
+{% block body %}
+
+  {% for i in formation %}
+    {% if slug == i.nom %}
+
+      <section class="banner">
+
+        <div class="banner-color">
+
+            <h1 class="banner-title">{{ slug }}</h1>
+
+            <div class="banner-resume">
+                <p class="resume-title">Formation</p>
+                <p class="resume-text">{{ i.resume }}</p>
+            </div>
+
+        </div>
+
+      </section>
+
+    {% endif %}
+  {% endfor %}
+
+{% endblock %}

@@ -28,10 +28,10 @@ class Formation
     #[ORM\Column(length: 255)]
     private ?string $duree = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $prerequis = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $debouches = null;
 
     #[ORM\ManyToOne(inversedBy: 'formations')]
