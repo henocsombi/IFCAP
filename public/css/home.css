@@ -1,7 +1,6 @@
 /* SECTION 1 : BANNER */
 
 .banner{
-  background-image: url(../images/banner1.jpg);
   height: 57.5rem;
   background-size: cover;
   background-position-y: 30%;

@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <section class="banner">
+    <section class="banner" style="background-image: url(../images/banner1.jpg);">
 
             <div class="banner-color">
 
@@ -62,7 +62,7 @@
         <div class="formations-container">
 
             {% for i in formation %}
-                <a href="{{ url('formation.show', {slug: i.nom}) }}" class="formations-card" style="background-image: url(../images/image1.jpg);">
+                <a href="{{ url('formation.show', {slug: i.nom}) }}" class="formations-card" style="background-image: url(../images/image2.jpg);">
                     <p>{{ i.nom }}</p>
                 </a>
             {% endfor %}

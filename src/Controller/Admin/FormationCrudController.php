@@ -5,9 +5,8 @@ namespace App\Controller\Admin;
 use App\Entity\Formation;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 
 class FormationCrudController extends AbstractCrudController
 {
@@ -20,11 +19,11 @@ class FormationCrudController extends AbstractCrudController
     {
         return [
             TextField::new(propertyName: 'nom'),
-            TextEditorField::new(propertyName: 'resume'),
-            TextEditorField::new(propertyName: 'description'),
+            TextareaField::new(propertyName: 'resume'),
+            TextareaField::new(propertyName: 'description'),
             TextField::new(propertyName: 'duree'),
-            TextEditorField::new(propertyName: 'prerequis'),
-            TextEditorField::new(propertyName: 'debouches'),
+            TextareaField::new(propertyName: 'prerequis'),
+            TextareaField::new(propertyName: 'debouches'),
             AssociationField::new(propertyName: 'idCertif'),
         ];
     }
