@@ -13,12 +13,12 @@
 
         <header>
 
-            <a href=""><img src="/images/logos/logo-ifcap.png" alt="IFCAP logo" class="logo" width="150px"></a>
+            <a href="{{ url('app_home') }}"><img src="/images/logos/logo-ifcap.png" alt="IFCAP logo" class="logo" width="150px"></a>
 
             <ul class="nav-list">
-                <li><a class="nav-link" href="">Accueil</a></li>
-                <li><a class="nav-link" href="">À Propos</a></li>
-                <li><a class="nav-link" href="">Nos Formations</a></li>
+                <li><a class="nav-link" href="{{ url('app_home') }}">Accueil</a></li>
+                <li><a class="nav-link" href="{{ url('app_home') }}#a-propos">À Propos</a></li>
+                <li><a class="nav-link" href="{{ url('formation') }}">Nos Formations</a></li>
             </ul>
 
             <a href=""><button>Contactez-nous</button></a>
