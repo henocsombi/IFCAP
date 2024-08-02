@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\AdherentRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: AdherentRepository::class)]
 #[ORM\Table(name: "Adherent")]
@@ -16,6 +17,7 @@ class Adherent
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Email]
     private ?string $email = null;
 
     #[ORM\Column(length: 255)]

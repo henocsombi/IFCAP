@@ -8,7 +8,9 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -18,17 +20,36 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('prenom')
-            ->add('nom')
-            ->add('email', EmailType::class, [
-                'empty_data' => ''
+            ->add('nom', TextType::class, [
+                'label' => 'Nom',
             ])
-            ->add('statut')
-            ->add('adresse')
-            ->add('telephone')
+            ->add('prenom', TextType::class, [
+                'label' => 'Prénom',
+            ])
+            ->add('email', EmailType::class, [
+                'empty_data' => '',
+                'label' => 'Email'
+            ])
+            ->add('statut', ChoiceType::class, [
+                'label' => 'Je suis...',
+                'choices' => [
+                    'En CDI' => 'En CDI',
+                    'En CDD' => 'En CDD',
+                    'Intérim' => 'Intérim'
+            ]])
             ->add('idFormation', EntityType::class, [
                 'class' => Formation::class,
                 'choice_label' => 'nom',
+                'label' => 'La formation'
+            ])
+            ->add('adresse', TextareaType::class, [
+                'label' => "Lieu d'habitation"
+            ])
+            ->add('telephone', TelType::class, [
+                'label' => 'Téléphone'
+            ])
+            ->add('submit', SubmitType::class, [
+                'label' => 'Envoyer'
             ])
         ;
     }
