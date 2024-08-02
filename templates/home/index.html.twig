@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <section class="banner">
+    <section class="banner" style="background-image: url(../images/banner1.jpg);">
 
             <div class="banner-color">
 
@@ -62,26 +62,10 @@
         <div class="formations-container">
 
             {% for i in formation %}
-                <a href="{{ url('formation.show', {slug: i.nom}) }}" class="formations-card" style="background-image: url(../images/image1.jpg);">
+                <a href="{{ url('formation.show', {slug: i.nom}) }}" class="formations-card" style="background-image: url(../images/{{ i.image }});">
                     <p>{{ i.nom }}</p>
                 </a>
             {% endfor %}
-
-            {# <a href="{{ url('formation.show', {slug: 'gestionnaire de paie'}) }}" class="formations-card" style="background-image: url(../images/image1.jpg); background-position-y: 35%;">
-                <p>Gestionnaire de paie</p>
-            </a>
-
-            <a href="{{ url('formation.show', {slug: 'assistant(e) comptable'}) }}" class="formations-card" style="background-image: url(../images/image2.jpg);">
-                <p>Assistant(e) Comptable</p>
-            </a>
-
-            <a href="{{ url('formation.show', {slug: 'gestionnaire comptable'}) }}" class="formations-card" style="background-image: url(../images/image3.jpg);">
-                <p>Gestionnaire comptable</p>
-            </a>
-
-            <a href="{{ url('formation.show', {slug: 'assistant(e) rh'}) }}" class="formations-card" style="background-image: url(../images/image4.jpg);">
-                <p>Assistant(e) RH</p>
-            </a> #}
 
         </div>
 
