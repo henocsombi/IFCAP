@@ -18,12 +18,6 @@ class FormationController extends AbstractController
         $this->entityManager = $entityManager;
     }
 
-    #[Route('/formation', name: 'formation')]
-    public function index(Request $request): Response
-    {
-        return $this->render('formation/index.html.twig');
-    }
-
     #[Route('/formation/{slug}', name: 'formation.show')]
     public function show(Request $request, string $slug): Response
     {
@@ -35,10 +29,4 @@ class FormationController extends AbstractController
             'formation' => $formations,
         ]);
     }
-    // public function index(): Response
-    // {
-    //     return $this->render('formation_page/index.html.twig', [
-    //         'controller_name' => 'FormationPageController',
-    //     ]);
-    // }
 }

@@ -7,6 +7,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 
 class FormationCrudController extends AbstractCrudController
 {
@@ -25,6 +26,7 @@ class FormationCrudController extends AbstractCrudController
             TextareaField::new(propertyName: 'prerequis'),
             TextareaField::new(propertyName: 'debouches'),
             AssociationField::new(propertyName: 'idCertif'),
+            ImageField::new(propertyName: 'image')->setUploadDir('public/images/'),
         ];
     }
 }

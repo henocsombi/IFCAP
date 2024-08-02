@@ -38,6 +38,9 @@ class Formation
     #[ORM\JoinColumn(nullable: false)]
     private ?Certification $idCertif = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image = null;
+
     /**
      * @var Collection<int, Avis>
      */
@@ -148,6 +151,18 @@ class Formation
     public function setIdCertif(?Certification $idCertif): static
     {
         $this->idCertif = $idCertif;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): static
+    {
+        $this->image = $image;
 
         return $this;
     }
