@@ -11,13 +11,67 @@
 
         <div class="banner-color">
 
-            <h1 class="banner-title">{{ slug }}</h1>
+            <h1 class="banner-title-formation">{{ slug }}</h1>
 
-            <div class="banner-resume">
+            <div class="banner-resume banner-resume-formation">
                 <p class="resume-title">Formation</p>
                 <p class="resume-text">{{ i.resume }}</p>
+                <a href=""><button class="formations-button2">S'inscrire</button></a>
             </div>
 
+        </div>
+
+      </section>
+
+      <section class="formation-container">
+
+        <article class="formation-description">
+
+          <div class="formation-description-container">
+            <h2>Informations sur la formation</h2>
+            <p>{{ i.description }}</p>
+          </div>
+
+          <div class="formation-description-container">
+            <h2>Prérequis</h2>
+            <p>{{ i.prerequis }}</p>
+          </div>
+
+          <div class="formation-description-container">
+            <h2>Débouchés professionnels</h2>
+            <p>{{ i.debouches }}</p>
+          </div>
+
+        </article>
+
+        <aside class="formation-infos">
+
+          <div class="formation-infos-container">
+            <h3>Durée :</h3>
+            <p>{{ i.duree }}</p>
+          </div>
+
+          <div class="formation-infos-container">
+            <h3>Lieu :</h3>
+            <p>{{ i.duree }}</p>
+          </div>
+
+          <div class="formation-infos-container">
+            <h3>Démarrage :</h3>
+            <p>{{ i.duree }}</p>
+          </div>
+
+          <div class="formation-infos-container">
+            <h3>Certification :</h3>
+            <p>{{ i.duree }}</p>
+          </div>
+
+        </aside>
+
+        <div class="inscription">
+          <h3>Intéressé.e ?</h3>
+          <p>Vous souhaitez vous inscrire ?<br>Contactez nous par mail, nous vous répondons le plus vite possible !</p>
+          <a href=""><button class="formations-button2">S'inscrire</button></a>
         </div>
 
       </section>
