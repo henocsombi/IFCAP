@@ -3,9 +3,34 @@
 {% block title %}Hello ContactController!{% endblock %}
 
 {% block body %}
+<section class="banner" style="background-image: url(../images/banner1.jpg);">
 
-<div>
-    {{ form_start(form)}}
-    {{ form_end(form)}}
-</div>
+            <div class="banner-color">
+
+                <h1 class="banner-title">Venez construire votre avenir avec nous</h1>
+
+                <div class="banner-resume">
+                    <p class="resume-title">Une formation pour vous</p>
+                    <p class="resume-text">Formations en gestion de paye, comptabilité, fiscalité et en management, IFCAP vous accueille afin de vous professionnaliser dans ces différents domaines.</p>
+                </div>
+
+            </div>
+
+    </section>
+    
+    <section class="inscription-section">
+        <div class="inscription-container">
+        
+            <h2 class="inscription-title">Inscription à votre formation</h2>
+
+            <div class="inscription-form">
+                {{ form_start(form)}}
+
+                    <div>{{ form_row(form.nom)}}{{ form_row(form.prenom)}}</div>
+
+                {{ form_end(form)}}
+            </div>
+        
+        </div>
+    </section>
 {% endblock %}

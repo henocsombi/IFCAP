@@ -1,0 +1,30 @@
+.inscription-section{
+  width: 100%;
+  height: 63rem;
+}
+
+.inscription-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inscription-title{
+  font-size: var(--title-size);
+  height: 10%;
+}
+
+.inscription-form{
+  height: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.inscription-form label{
+  font-size: var(--text-size);
+}
+
+.inscription-form input, .inscription-form select, .inscription-form textarea{
+  height: 2.5rem;
+}
+
