@@ -24,11 +24,20 @@
             <h2 class="inscription-title">Inscription à votre formation</h2>
 
             <div class="inscription-form">
-                {{ form_start(form)}}
+                <div class="inscription-form-container">
+                    {{ form_start(form)}}
 
-                    <div>{{ form_row(form.nom)}}{{ form_row(form.prenom)}}</div>
+                        {{ form_row(form.prenom) }}
+                        {{ form_row(form.email) }}
+                        {{ form_row(form.statut) }}
+                        {{ form_row(form.idFormation) }}
+                        {{ form_row(form.adresse) }}
+                        {{ form_row(form.telephone) }}
+                        {{ form_row(form.submit) }}
+                        {{ form_row(form.nom) }}
 
-                {{ form_end(form)}}
+                    {{ form_end(form)}}
+                </div>
             </div>
         
         </div>
