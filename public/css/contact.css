@@ -24,7 +24,7 @@
   font-size: var(--text-size);
 }
 
-.inscription-form input, .inscription-form select, .inscription-form textarea{
+.inscription-form-container input, .inscription-form-container select, .inscription-form-container textarea{
   height: 2.5rem;
 }
 
