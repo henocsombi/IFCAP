@@ -18,6 +18,7 @@
   --subtitle-size: 25px;
   --text-size: 14px;
   --button-fontsize: 14px;
+  --button-fontsize2: 18px;
   --color1: #B86735;
   --color2: #0097B2;
   --title-color: #474747;
@@ -65,6 +66,17 @@ button{
   color: white;
   background-color: var(--color1);
   font-size: var(--button-fontsize);
+}
+
+.button2{ /* rectangulaire */
+  width: 250px;
+  border-radius: 15px;
+  font-size: var(--button-fontsize2);
+}
+
+.button3{  /* grande typo */
+  width: 150px;
+  font-size: var(--button-fontsize2);
 }
 
 button:hover{
