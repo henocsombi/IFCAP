@@ -23,55 +23,71 @@
 
       </section>
 
-      <section class="formation-container">
+      <section class="formation-section">
 
-        <article class="formation-description">
+        <div class="formation-container">
 
-          <div class="formation-description-container">
-            <h2>Informations sur la formation</h2>
-            <p>{{ i.description }}</p>
-          </div>
+          <article class="formation-description">
 
-          <div class="formation-description-container">
-            <h2>Prérequis</h2>
-            <p>{{ i.prerequis }}</p>
-          </div>
+            <div class="formation-description-container">
+              <h2 class="formation-h2">Informations sur la formation</h2>
+              <p>{{ i.description }}</p>
+            </div>
 
-          <div class="formation-description-container">
-            <h2>Débouchés professionnels</h2>
-            <p>{{ i.debouches }}</p>
-          </div>
+            <div class="formation-description-container">
+              <h2 class="formation-h2">Prérequis</h2>
+              <p>{{ i.prerequis }}</p>
+            </div>
 
-        </article>
+            <div class="formation-description-container">
+              <h2 class="formation-h2">Débouchés professionnels</h2>
+              <p>{{ i.debouches }}</p>
+            </div>
 
-        <aside class="formation-infos">
+          </article>
 
-          <div class="formation-infos-container">
-            <h3>Durée :</h3>
-            <p>{{ i.duree }}</p>
-          </div>
+          <aside class="formation-infos">
 
-          <div class="formation-infos-container">
-            <h3>Lieu :</h3>
-            <p>{{ i.duree }}</p>
-          </div>
+            <div class="formation-infos-container">
+              <div class="formation-subtitle">
+                <img class="formation-icon" src="/images/icons/clock.svg" alt="valide">
+                <h3 class="formation-h3">Durée :</h3>
+              </div>
+              <p>{{ i.duree }}</p>
+            </div>
 
-          <div class="formation-infos-container">
-            <h3>Démarrage :</h3>
-            <p>{{ i.duree }}</p>
-          </div>
+            <div class="formation-infos-container">
+              <div class="formation-subtitle">
+                <img class="formation-icon" src="/images/icons/location.svg" alt="valide">
+                <h3 class="formation-h3">Lieu :</h3>
+              </div>
+              <p>{{ i.duree }}</p>
+            </div>
 
-          <div class="formation-infos-container">
-            <h3>Certification :</h3>
-            <p>{{ i.duree }}</p>
-          </div>
+            <div class="formation-infos-container">
+              <div class="formation-subtitle">
+                <img class="formation-icon" src="/images/icons/calendar.svg" alt="valide">
+                <h3 class="formation-h3">Démarrage :</h3>
+              </div>
+              <p>{{ i.duree }}</p>
+            </div>
 
-        </aside>
+            <div class="formation-infos-container">
+              <div class="formation-subtitle">
+                <img class="formation-icon" src="/images/icons/check.svg" alt="valide">
+                <h3 class="formation-h3">Certification :</h3>
+              </div>
+              <p>{{ i.duree }}</p>
+            </div>
 
-        <div class="inscription">
-          <h3>Intéressé.e ?</h3>
-          <p>Vous souhaitez vous inscrire ?<br>Contactez nous par mail, nous vous répondons le plus vite possible !</p>
-          <a href=""><button class="button3">S'inscrire</button></a>
+            <div class="formation-inscription">
+              <h3 class="formation-h4">Intéressé.e ?</h3>
+              <p>Vous souhaitez vous inscrire ?<br>Contactez nous par mail, nous vous répondons le plus vite possible !</p>
+              <a href=""><button class="formation-button">S'inscrire</button></a>
+            </div>
+
+          </aside>
+
         </div>
 
       </section>

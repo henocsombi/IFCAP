@@ -1,3 +1,5 @@
+/* SECTION 1 : BANNER  */
+
 .banner-title-formation{
   width: 30%;
   height: unset;
@@ -6,4 +8,86 @@
 .banner-resume-formation{
   width: 22%;
   height: 47%;
+}
+
+/* SECTION 2 : FORMATIONS CONTAINER */
+
+.formation-section {
+  display: flex;
+  margin: 7% 0;
+  justify-content: center;
+}
+
+.formation-container{
+  width: 75%;
+  height: 65rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Partie description  */
+
+.formation-description {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formation-description-container {
+  margin-bottom: 15%;
+}
+
+.formation-h2 {
+  color: var(--color2);
+  text-align: unset;
+  margin-bottom: 5%;
+}
+
+/* Partie informations  */
+
+.formation-infos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.formation-subtitle{
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.formation-icon{
+  width: 20px;
+  color: var(--color1);
+}
+
+.formation-h3 {
+  color: var(--color1);
+  font-size: var(--subtitle-size);
+  margin-left: 5%;
+}
+
+.formation-inscription{
+  width: 250px;
+  height: 250px;
+  padding: 8%;
+  border-radius: 18px;
+  background-color: #d9d9d96c;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.formation-h4 {
+  color: var(--color2);
+  font-size: var(--button-fontsize2);
+  font-weight: 400;
+}
+
+.formation-button{
+  width: 130px;
+  font-size: var(--button-fontsize);
+  background-color: var(--color2);
 }
