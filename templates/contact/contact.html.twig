@@ -27,14 +27,46 @@
                 <div class="inscription-form-container">
                     {{ form_start(form)}}
 
-                        {{ form_row(form.prenom) }}
-                        {{ form_row(form.email) }}
-                        {{ form_row(form.statut) }}
-                        {{ form_row(form.idFormation) }}
-                        {{ form_row(form.adresse) }}
-                        {{ form_row(form.telephone) }}
+                        <div class="incription-form-row">
+                            {{ form_label(form.prenom) }}
+                            {{ form_widget(form.prenom) }}
+                            {% if form is rootform %}
+                                {{ form_errors(form) }}
+                            {% endif %}
+                        </div>
+
+                        <div class="incription-form-row">
+                            {{ form_label(form.nom) }}
+                            {{ form_widget(form.nom) }}
+                        </div>
+
+                        <div class="incription-form-row">
+                            {{ form_label(form.email) }}
+                            {{ form_widget(form.email) }}
+                            {# {{ form_errors(form.email) }} #}
+                        </div>
+
+                        <div class="incription-form-row">
+                            {{ form_label(form.statut) }}
+                            {{ form_widget(form.statut) }}
+                        </div>
+
+                        <div class="incription-form-row">
+                            {{ form_label(form.idFormation) }}
+                            {{ form_widget(form.idFormation) }}
+                        </div>
+
+                        <div class="incription-form-row">
+                            {{ form_label(form.adresse) }}
+                            {{ form_widget(form.adresse) }}
+                        </div>
+
+                        <div class="incription-form-row">
+                            {{ form_label(form.telephone) }}
+                            {{ form_widget(form.telephone) }}
+                        </div>
+
                         {{ form_row(form.submit) }}
-                        {{ form_row(form.nom) }}
 
                     {{ form_end(form)}}
                 </div>

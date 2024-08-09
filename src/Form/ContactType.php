@@ -35,7 +35,7 @@ class ContactType extends AbstractType
                 'choices' => [
                     'En CDI' => 'En CDI',
                     'En CDD' => 'En CDD',
-                    'Intérim' => 'Intérim'
+                    'En intérim' => 'Intérim'
             ]])
             ->add('idFormation', EntityType::class, [
                 'class' => Formation::class,
@@ -43,7 +43,7 @@ class ContactType extends AbstractType
                 'label' => 'La formation'
             ])
             ->add('adresse', TextareaType::class, [
-                'label' => "Lieu d'habitation"
+                'label' => "Adresse"
             ])
             ->add('telephone', TelType::class, [
                 'label' => 'Téléphone'
