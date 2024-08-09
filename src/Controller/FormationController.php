@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 use App\Entity\Formation;
+use App\Entity\Session;
 use Doctrine\ORM\EntityManagerInterface;
 
 class FormationController extends AbstractController
@@ -24,9 +25,13 @@ class FormationController extends AbstractController
         $repository = $this->entityManager->getRepository(Formation::class);
         $formations = $repository->findAll();
 
+        $repository = $this->entityManager->getRepository(Session::class);
+        $sessions = $repository->findAll();
+
         return $this->render('formation/show.html.twig', [
             'slug' => $slug,
             'formation' => $formations,
+            'session' => $sessions,
         ]);
     }
 }
