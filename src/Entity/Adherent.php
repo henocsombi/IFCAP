@@ -16,28 +16,28 @@ class Adherent
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
     #[Assert\Email]
-    private ?string $email = null;
+    #[Assert\NotBlank]
+    public ?string $email = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $prenom = null;
+    public ?string $prenom = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $nom = null;
+    public ?string $nom = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $statut = null;
+    public ?string $statut = null;
 
     #[ORM\ManyToOne(inversedBy: 'inscriptions')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Formation $idFormation = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $adresse = null;
+    public ?string $adresse = null;
 
     #[ORM\Column]
-    private ?int $telephone = null;
+    public ?string $telephone = null;
 
     public function getId(): ?int
     {
