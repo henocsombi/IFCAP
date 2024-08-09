@@ -141,6 +141,13 @@ footer{
   align-items: center;
 }
 
+.footer-trait{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-block-end: 1px solid rgba(255, 255, 255, 0.151);
+}
+
 .footer{
   display: flex;
   justify-content: space-evenly;
@@ -175,7 +182,7 @@ footer{
 }
 
 .footer-absolute{
-  height: 4rem;
+  height: 5rem;
   width: 50%;
   display: flex;
   align-items: center;

@@ -31,17 +31,17 @@
 
             <div class="formation-description-container">
               <h2 class="formation-h2">Informations sur la formation</h2>
-              <p>{{ i.description }}</p>
+              <p>{{ i.description | nl2br }}</p>
             </div>
 
             <div class="formation-description-container">
               <h2 class="formation-h2">Prérequis</h2>
-              <p>{{ i.prerequis }}</p>
+              <p>{{ i.prerequis | nl2br }}</p>
             </div>
 
             <div class="formation-description-container">
               <h2 class="formation-h2">Débouchés professionnels</h2>
-              <p>{{ i.debouches }}</p>
+              <p>{{ i.debouches | nl2br }}</p>
             </div>
 
           </article>
@@ -53,7 +53,7 @@
                 <img class="formation-icon" src="/images/icons/clock.svg" alt="valide">
                 <h3 class="formation-h3">Durée :</h3>
               </div>
-              <p>{{ i.duree }}</p>
+              <p class="formation-infos-p">{{ i.duree }}</p>
             </div>
 
             <div class="formation-infos-container">
@@ -61,7 +61,7 @@
                 <img class="formation-icon" src="/images/icons/location.svg" alt="valide">
                 <h3 class="formation-h3">Lieu :</h3>
               </div>
-              <p>{{ i.duree }}</p>
+              <p class="formation-infos-p">60 rue François 1er 75008 Paris</p>
             </div>
 
             <div class="formation-infos-container">
@@ -69,7 +69,7 @@
                 <img class="formation-icon" src="/images/icons/calendar.svg" alt="valide">
                 <h3 class="formation-h3">Démarrage :</h3>
               </div>
-              <p>{{ i.duree }}</p>
+              <p class="formation-infos-p">{% for x in session %}{% if i.nom == x.idFormation %}{{ x.dateDebut|ea_as_string }}{% endif %}{% endfor %}</p>
             </div>
 
             <div class="formation-infos-container">
@@ -77,7 +77,7 @@
                 <img class="formation-icon" src="/images/icons/check.svg" alt="valide">
                 <h3 class="formation-h3">Certification :</h3>
               </div>
-              <p>{{ i.duree }}</p>
+              <p class="formation-infos-p">{{ i.idCertif }}</p>
             </div>
 
             <div class="formation-inscription">
